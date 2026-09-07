@@ -28,7 +28,13 @@
 //global scope (locally would destory everytime)
 document.getElementById("tries").innerText = ("Tries "+ 10);
 let tries = 10;
+
+function randomNumber(){
+    return Math.floor(Math.random()*100);
+}
+
 function SubmitClick(){
+    console.log(randomNumber());
     //DOM tree (then we get the element by ID), then value is attribute
     let userAnswer = document.querySelector("#guessInput").value;
     //return true for invalid so string (works)|| constraints (dosen't)
@@ -38,7 +44,6 @@ function SubmitClick(){
         console.log(userAnswer);
         // Checking the box now in that moment
         newAnswer = document.querySelector("#guessInput").value = "";
-        console.log(newAnswer);
     } else{
         if (tries == 1){
             console.log("sorry out of luck!");
@@ -52,7 +57,7 @@ function SubmitClick(){
             document.getElementById("tries").innerText = ("Tries "+ tries);
             console.log(userAnswer);
             console.log(userAnswer);
-            console.log(tries);        
+            console.log(tries); 
     }
 
     }

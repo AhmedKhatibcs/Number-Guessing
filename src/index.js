@@ -40,7 +40,7 @@ function SubmitClick(){
         newAnswer = document.querySelector("#guessInput").value = "";
         console.log(newAnswer);
     } else{
-        if (tries <= 0){
+        if (tries == 1){
             console.log("sorry out of luck!");
             document.getElementById("tries").innerText = "sorry out of luck!";
             return;

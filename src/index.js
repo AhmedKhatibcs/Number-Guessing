@@ -47,7 +47,7 @@ function SubmitClick(){
             return;
     }
 
-         else{
+         if (tries > 0){
             tries -= 1;
             document.getElementById("tries").innerText = ("Tries "+ tries);
             console.log(userAnswer);

@@ -7,21 +7,20 @@
 </head>
 <body>
     <div class="mainContainer">
-        <div class="bestAttempt">
+        <div id="bestAttempt">
             <h1>Best Attempt:</h1>
         </div>
-        <div id="validator">Guess: </div>
-        <div class="guessInput">
-            <input placeholder="Enter Guess">
-        </div>
+        <input id ="guessInput" placeholder="Enter Guess">
         <div class="buttons">
             <div class="submitBtn">
-                <button>Submit</button>
+                <button onclick="SubmitClick()">Submit</button>
             </div>
             <div class="revealBtn">
                 <button>Reveal</button>
             </div>
         </div>
     </div>
+    <p>0-99 is valid</p>
+ <script src="index.js"></script> 
 </body>
 </html>

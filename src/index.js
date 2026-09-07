@@ -16,19 +16,45 @@
 
 
 
+//Note to self: Both method works with value
+// function SubmitClick(){
+//     //Both work:
+//     // let submit = document.querySelector("#guessInput");
+//     // submit.value = "";
+//       let submit = document.getElementById("guessInput");
+//       submit.value = "";
+// }
+
 //global scope (locally would destory everytime)
+
 let tries = 10;
 function SubmitClick(){
     //DOM tree (then we get the element by ID), then value is attribute
-    const userAnswer = document.getElementById("guessInput").value;
-    if (tries < 0){
-        console.log("sorry out of luck!");
-        return;
+    let userAnswer = document.querySelector("#guessInput").value;
+    //return true for invalid so string (works)|| constraints (dosen't)
+    if (isNaN(userAnswer) || (0 > userAnswer  || userAnswer > 99)){
+        console.log("Sorry Invalid");
+        document.querySelector("#guessInput").placeholder = "Invalid";
+        console.log(userAnswer);
+        // Checking the box now in that moment
+        newAnswer = document.querySelector("#guessInput").value = "";
+        console.log(newAnswer);
+    } else{
+        if (tries < 0){
+            console.log("sorry out of luck!");
+            return;
     }
-    else{
-     tries -= 1;
-     console.log(userAnswer);
-     console.log(tries);        
+
+         else{
+            tries -= 1;
+            console.log(userAnswer);
+            console.log(tries);        
+    }
+
     }
 
 }
+
+
+
+

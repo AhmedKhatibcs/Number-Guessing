@@ -26,7 +26,7 @@
 // }
 
 //global scope (locally would destory everytime)
-
+document.getElementById("tries").innerText = ("Tries "+ 10);
 let tries = 10;
 function SubmitClick(){
     //DOM tree (then we get the element by ID), then value is attribute
@@ -43,6 +43,7 @@ function SubmitClick(){
         if (tries == 1){
             console.log("sorry out of luck!");
             document.getElementById("tries").innerText = "sorry out of luck!";
+            tries -= 1;
             return;
     }
 

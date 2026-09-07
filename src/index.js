@@ -40,13 +40,16 @@ function SubmitClick(){
         newAnswer = document.querySelector("#guessInput").value = "";
         console.log(newAnswer);
     } else{
-        if (tries < 0){
+        if (tries <= 0){
             console.log("sorry out of luck!");
+            document.getElementById("tries").innerText = "sorry out of luck!";
             return;
     }
 
          else{
             tries -= 1;
+            document.getElementById("tries").innerText = ("Tries "+ tries);
+            console.log(userAnswer);
             console.log(userAnswer);
             console.log(tries);        
     }
